@@ -1,0 +1,19 @@
+#Container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 1000px;
+    width: 1000px;
+    box-shadow: 0 0 0 3px black;
+
+}
+
+
+
+.box {
+    display: flex;
+    /* width: 62.5px; */
+    /* height: 62.5px; */
+    background-color: rgb(219, 213, 213);
+    box-shadow: 0 0 0 1px rgb(225, 225, 225);
+
+}
