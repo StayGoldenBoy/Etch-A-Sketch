@@ -6,7 +6,7 @@ if (gridSize > 100){
     gridSize =  prompt("Gird size selection too large, please select a grid size less than 100 and greater than 0")
 }
 let userSize = (gridSize * gridSize);
-let computationSize = (800/gridSize);
+let computationSize = (600/gridSize);
 
 for (let i = 0; i < userSize; i++){
 
