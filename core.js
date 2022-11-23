@@ -6,7 +6,7 @@ if (gridSize > 100){
     gridSize =  prompt("Gird size selection too large, please select a grid size less than 100 and greater than 0")
 }
 let userSize = (gridSize * gridSize);
-let computationSize = (1000/gridSize);
+let computationSize = (800/gridSize);
 
 for (let i = 0; i < userSize; i++){
 
@@ -24,31 +24,26 @@ for (let i = 0; i < userSize; i++){
     const boxHolder = document.querySelector('#Container');
     boxHolder.appendChild(createSquare);
     }
-
+  
 }
-
-// Add delay function
-function wait(ms){
-    var start = new Date().getTime();
-    var end = start;
-    while(end < start + ms) {
-      end = new Date().getTime();
-   }
- }
 //add button to run function squareMaker
 const boxMaker = document.createElement("button");
-boxMaker.innerText = "Start";
+boxMaker.innerText = "START";
 boxMaker.addEventListener('click', () => {
-    squareMaker();
-})
+    squareMaker(); }, {
+    once: true
+});
+
+//add button to remove existing squares
+const boxKiller = document.createElement("button");
+boxKiller.innerText = "NEW GRID";
+boxKiller.addEventListener('click', () => {
+    const boxHolder = document.querySelector('#Container');
+    boxHolder.replaceChildren();
+    squareMaker(); })
 
 const buttonHolder = document.querySelector('#buttonHolder');
 buttonHolder.appendChild(boxMaker);
-
+buttonHolder.appendChild(boxKiller);
 //squareMaker();
-const boxKiller = document.createElement("button");
-boxKiller.innerText = "New Grid";
-boxKiller.addEventListener('click', () = > {
-    boxHolder.replaceChildren();
-})
 
